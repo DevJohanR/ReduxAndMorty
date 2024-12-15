@@ -1,0 +1,56 @@
+.divContainer {
+    background-color: black;
+    color: white;
+    height: 80px;
+    display: flex;
+    position: relative;
+    justify-content: center; 
+    align-items: center;
+}
+
+.ulContainer {
+    display: flex;
+    justify-content: space-evenly; /* Separa las dos listas */
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+}
+
+.divContainer ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Espacio entre elementos li */
+}
+
+.searchBar{
+    position: absolute;
+    left: 50%; /* Mueve el elemento al 50% del ancho del contenedor */
+    top: 100%; /* Opcional: centra verticalmente */
+    transform: translate(-50%, -50%); /* Compensa el desplazamiento */
+    background-color: black;
+    padding: 10px;
+    border-radius:20px ;
+   
+}
+
+.searchBar input{
+    border-radius: 20px;
+    padding: 12px;
+    padding-right: 45px;
+    padding-left: 45px;
+    
+}
+
+.btnAddCharacter{
+ background-color: #ffa766;
+position: absolute;
+right: 10px;
+ width: 42px; /* Ajusta el tamaño según tu diseño */
+    height: 42px; /* El mismo valor que el ancho */
+    border-radius: 50%; /* Hace el botón perfectamente redondo */
+    border: none; /* Opcional: elimina el borde */
+    top: 50%;
+    transform: translateY(-50%); 
+  
+  
+}
