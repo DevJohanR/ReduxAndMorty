@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 export default function Card({ id, name, status, species, gender, origin, image, onClose, onAddFavorite, showRemoveButton }) {
    return (
@@ -40,7 +40,12 @@ export default function Card({ id, name, status, species, gender, origin, image,
          <h2>{origin.name} </h2>
          <img src={image} alt={name} /> 
 
-
+         {/* Botón Detail */}
+         <Link to={`/detail/${id}`}>
+            <button style={{ backgroundColor: 'orange', color: 'white', marginTop: '10px' }}>
+               Detail
+            </button>
+         </Link>
       </div>
    );
 }

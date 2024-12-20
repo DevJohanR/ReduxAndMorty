@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import PageCharacterFavorite from "./pages/PageCharacterFavorite.jsx";
-
+import PageDetail from "./pages/PageDetail.jsx";
 
 function App() {
 const[characters, setCharacters] = useState([]);
@@ -51,12 +51,12 @@ const onClose = (id) => {
     <div className='App'>
    {/* */} 
    <Nav onSearch={onSearch} />
-    <Cards characters={characters}  onClose={onClose}/>
-    <hr/> 
+ 
     <Routes>
-        
+    <Route path="/" element={<Cards characters={characters} onClose={onClose} />} />
+
         <Route path="/favorites" element={<PageCharacterFavorite />} />
-       
+       <Route path="/detail/:id" element={<PageDetail/>}></Route>
       </Routes>
  </div>
   )
