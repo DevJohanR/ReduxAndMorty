@@ -24,9 +24,10 @@ export default function SearchBar({onSearch}) {
       <div className={styles.divContainer}>
  <div className={styles.ulContainer}>
     <ul>
-      <li>Elemento li</li>
-      <li>Elemento li</li>
-      <li>Elemento li</li>
+ 
+      <li><Link to="/">Inicio</Link></li>
+      <li><Link to="/favorites">Favoritos</Link></li>
+      <li><Link>¿Qué Es Esto, Rick?</Link></li>
     </ul>
 
     <ul>
@@ -43,7 +44,7 @@ export default function SearchBar({onSearch}) {
          onChange={handleChange}
          />
         <button className={styles.btnAddCharacter} onClick={() => onSearch(id)}>+</button>
-       {/*<button onClick={handleRandomCharacter}>Agregar Aleatorio</button> */} 
+       <button className={styles.btnRandom} onClick={handleRandomCharacter}>Personaje Aletorio</button> 
         </div>
      
       </div>

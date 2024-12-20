@@ -42,15 +42,45 @@
 }
 
 .btnAddCharacter{
- background-color: #ffa766;
-position: absolute;
-right: 10px;
- width: 42px; /* Ajusta el tamaño según tu diseño */
+    position: absolute;
+    right: 10px;
+    width: 42px; /* Tamaño del botón */
     height: 42px; /* El mismo valor que el ancho */
-    border-radius: 50%; /* Hace el botón perfectamente redondo */
-    border: none; /* Opcional: elimina el borde */
-    top: 50%;
-    transform: translateY(-50%); 
+    border-radius: 50%; /* Botón redondo */
+    border: none; /* Sin bordes */
+    background: linear-gradient(135deg, #ffa766, #ff7300); /* Gradiente en diagonal */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.2), /* Sombra exterior suave */
+        inset 0 2px 4px rgba(255, 255, 255, 0.4); /* Brillo interno */
+    cursor: pointer;
+    transition: all 0.3s ease;
   
   
+}
+
+.btnRandom{
+    position: absolute;
+    left: 50%;
+    top: -17px;
+    transform: translate(-50%, -50%);
+    padding: 5px 20px;
+    background: linear-gradient(135deg, #ffa766, #ff8c42);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.3), /* Sombra general */
+        inset 0 2px 4px rgba(255, 255, 255, 0.4); /* Brillo interno */
+    outline: 2px solid #fff; /* Borde externo sutil */
+}
+
+li a{
+    color: white;
+    text-decoration: none;
 }

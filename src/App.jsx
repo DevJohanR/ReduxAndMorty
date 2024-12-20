@@ -2,6 +2,8 @@ import Cards from "./components/Cards/Cards.jsx"
 import Nav from "./components/Nav/Nav.jsx"
 import { useState } from "react";
 import axios from "axios";
+import { Routes, Route } from "react-router-dom";
+import PageCharacterFavorite from "./pages/PageCharacterFavorite.jsx";
 
 
 function App() {
@@ -51,7 +53,11 @@ const onClose = (id) => {
    <Nav onSearch={onSearch} />
     <Cards characters={characters}  onClose={onClose}/>
     <hr/> 
-
+    <Routes>
+        
+        <Route path="/favorites" element={<PageCharacterFavorite />} />
+       
+      </Routes>
  </div>
   )
 }

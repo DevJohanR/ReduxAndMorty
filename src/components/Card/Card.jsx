@@ -1,6 +1,6 @@
 
 
-export default function Card({ id, name, status, species, gender, origin, image, onClose, onAddFavorite }) {
+export default function Card({ id, name, status, species, gender, origin, image, onClose, onAddFavorite, showRemoveButton }) {
    return (
      
       <div>
@@ -30,6 +30,12 @@ export default function Card({ id, name, status, species, gender, origin, image,
                >
                   agregar personaje favorito
           </button>
+
+                {/* Botón "Eliminar de Favoritos" que solo se muestra si showRemoveButton es true */}
+
+                  {showRemoveButton && (
+                     <button onClick={()=>alert(`Eliminar favorito: ${name}`)}>Eliminar Favorito</button>
+                  )}
          <h2>{gender} </h2>
          <h2>{origin.name} </h2>
          <img src={image} alt={name} /> 
